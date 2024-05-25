@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'neue_haas_grotesk_textregular';
+    src: url('zayanislam/css/fonts/neuehaasgrotesktext-webfont.woff2') format('woff2'),
+         url('zayanislam/css/fonts/neuehaasgrotesktext-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'neue_haas_grotesk_textbold';
+    src: url('zayanislam/css/fonts/neuehaasgrotesktextbold-webfont.woff2') format('woff2'),
+         url('zayanislam/css/fonts/neuehaasgrotesktextbold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'neue_haas_grotesk_textBdIt';
+    src: url('zayanislam/css/fonts/neuehaasgrotesktextbolditalic-webfont.woff2') format('woff2'),
+         url('zayanislam/css/fonts/neuehaasgrotesktextbolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'neue_haas_grotesk_textitalic';
+    src: url('zayanislam/css/fonts/neuehaasgrotesktextitalic-webfont.woff2') format('woff2'),
+         url('zayanislam/css/fonts/neuehaasgrotesktextitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'neue_haas_grotesk_textmedium';
+    src: url('zayanislam/css/fonts/neuehaasgrotesktextmedium-webfont.woff2') format('woff2'),
+         url('zayanislam/css/fonts/neuehaasgrotesktextmedium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'neue_haas_grotesk_textMdIt';
+    src: url('zayanislam/css/fonts/neuehaasgrotesktextmediumitalic-webfont.woff2') format('woff2'),
+         url('zayanislam/css/fonts/neuehaasgrotesktextmediumitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body {
+    color: rgb(136, 136, 136);
+    margin: -30px auto;
+    padding: 50px;
+    font-family: system-ui;
+    outline: none;
+    overflow: hidden auto;
+    display: block;
+    letter-spacing: 1px;
+    background: rgb(236, 230, 232);
+}
+
+#title-name {
+  cursor: text;
+}
+
+a {
+  color: #777;
+  text-decoration-color: #ccc;
+}
+
+h1 {
+    font-family: 'neue_haas_grotesk_textmedium', Arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #000000;
+    font-size: 50px
+
+}
+
+
+p {
+    display: block;
+    flex: 2;
+    margin: 0;
+    unicode-bidi: isolate;
+    font-family: 'neue_haas_grotesk_textmedium', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #5d5a5d;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 1.6;
+
+}
+
+.image img {
+    width: 470px;
+    height: auto;
+    box-shadow: 5px 5px 5px 3px #999;
+}
