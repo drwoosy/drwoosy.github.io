@@ -52,7 +52,7 @@ p {
 
 .button-sigma {
     margin: auto;
-    padding-top: 60px 
+    padding-top: 40px 
 }
 
 @media (max-width: 1000px) {
@@ -65,7 +65,6 @@ p {
 .image img {
     box-shadow: 5px 5px 5px 3px #999;
 }
-
  .my-button {
             background-color: #ce9d9e; 
             border: none; 
@@ -75,14 +74,13 @@ p {
             text-decoration: none; 
             display: inline-block; 
             font-size: 28px; 
-            margin: 4px 2px; 
+            margin: 4px 0; 
             cursor: pointer;
             border-radius: 12px; 
             transition: background-color 0.3s ease, transform 0.3s ease; 
             position: relative; 
         }
-
-        .my-button::after {
+      .my-button::after {
             content: ''; 
             position: absolute;
             left: 50%;
@@ -91,7 +89,6 @@ p {
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-
         .my-button:hover {
             background-color: #dcb9ba; 
             transform: translateY(-2px); 
@@ -112,3 +109,31 @@ p {
         .my-button:hover span {
             display: none;
         }
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding-left: 10px;
+    padding-bottom: 26px;
+    background-color: rgb(236, 230, 232);
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+#linkedin-link,
+#github-link {
+    margin-right: 20px; /* Space between the icons */
+}
+
+#linkedin-link {
+    display: block; /* Ensures the entire icon is clickable */
+    width: 10px; /* Adjust the width as needed */
+    height: 10px; /* Adjust the height as needed */
+}
+
+#github-link {
+    display: block; /* Ensures the entire icon is clickable */
+    width: 10px; /* Adjust the width as needed */
+    height: 10px; /* Adjust the height as needed */
+    padding-left: 20px;
+}
