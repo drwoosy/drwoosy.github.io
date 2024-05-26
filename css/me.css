@@ -119,23 +119,23 @@ p {
     padding-bottom: 26px;
     background-color: rgb(236, 230, 232);
     display: flex;
-    align-items: center; /* Align items vertically */
+    align-items: center; 
 }
 
 #linkedin-link,
 #github-link {
-    margin-right: 20px; /* Space between the icons */
+    margin-right: 20px; 
 }
 
 #linkedin-link {
-    display: block; /* Ensures the entire icon is clickable */
-    width: 10px; /* Adjust the width as needed */
-    height: 10px; /* Adjust the height as needed */
+    display: block; 
+    width: 10px; 
+    height: 10px; 
 }
 
 #github-link {
-    display: block; /* Ensures the entire icon is clickable */
-    width: 10px; /* Adjust the width as needed */
-    height: 10px; /* Adjust the height as needed */
+    display: block; 
+    width: 10px; 
+    height: 10px; 
     padding-left: 20px;
 }

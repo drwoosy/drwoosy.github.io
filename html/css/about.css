@@ -1,57 +1,80 @@
 body {
-                background-color: #f1e3e3;
-                margin: 0;
-                font-family: Arial, sans-serif;
-            }
-            header {
-               background-color: #2b2727;
-                color: #d5c1c1;
-                padding: 1%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                font-family: "Geologica", "sans-serif";
-            }
+    background-color: #f1e3e3;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
-            .left {
-                width: 50%;
-                text-align: left;
-                font-weight: bold;
-                padding-left: 10%;
-                font-size: 25px
-            }       
+header {
+    background-color: #2b2727;
+    color: #d5c1c1;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Geologica", "sans-serif";
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
-            .right {
-                width: 50%;
-                text-align: right;
-                padding-right: 10%;
-            }
+.left {
+    width: 50%;
+    text-align: left;
+    font-weight: bold;
+    padding-left: 10%;
+    font-size: 25px;
+}
 
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
+.right {
+    width: 50%;
+    text-align: right;
+    padding-right: 10%;
+}
 
-            nav ul li {
-                display: inline-block;
-                margin-left: 10%;
-            }
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-             nav ul li:first-child {
-                margin-left: 0;
-            }
+nav ul li {
+    display: inline-block;
+    margin-left: 10%;
+}
 
-            nav ul li a {
-                color: #d5c1c1;
-                text-decoration: none;
-            }
+nav ul li:first-child {
+    margin-left: 0;
+}
 
-            h1 {
-                font-family: "Geologica", "sans-serif";
-                font-size: 300%;
-                font-weight: normal;
-                padding-top: 1%;
-                padding-left: 10.5%
+nav ul li a {
+    color: #d5c1c1;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: "Geologica", "sans-serif";
+    font-size: 300%;
+    font-weight: normal;
+    padding-top: 1%;
+    padding-left: 10.5%;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    right: 0; 
+    margin: 0; 
+    padding: 0; 
+    z-index: 1000;
+}
+
+.progress-bar {
+    height: 6px;
+    background-color: #fff;
+    width: 0;
 }
 
 @media only screen and (max-width: 1118px) {
@@ -69,4 +92,8 @@ body {
         display: block;
         margin: 5px 0;
     }
+}
+
+.content {
+    padding-top: 70px; /* Adjust this value as needed */
 }
