@@ -90,14 +90,16 @@ p {
             transition: opacity 0.3s ease;
         }
         .my-button:hover {
-            background-color: #dcb9ba; 
+            background-color: #f1e3e3; 
+            color: #f1e3e3;
             transform: translateY(-2px); 
-            opacity: 0.3;
+            opacity: 1;
         }
 
         .my-button:hover::after {
-            content: '➔'; 
-            font-size: 45px; 
+            content: '⟶'; 
+            font-size: 45px;
+            font-weight: bold;
             color: black; 
             opacity: 1;
         }
