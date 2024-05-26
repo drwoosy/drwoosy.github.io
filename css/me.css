@@ -112,8 +112,8 @@ p {
 #footer {
     position: fixed;
     bottom: 0;
-    left: 0;
-    padding-left: 10px;
+    right: 0;
+    padding-right: 10px;
     padding-bottom: 26px;
     background-color: rgb(236, 230, 232);
     display: flex;
