@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Optional: stop observing once visible
+                observer.unobserve(entry.target); 
             }
         });
     }, {
-        threshold: 0.5 // Adjust this value to control when the animation starts
+        threshold: 0.5 
     });
 
     entries.forEach(entry => {

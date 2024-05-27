@@ -107,7 +107,7 @@ h1 {
 }
 
 .content {
-    padding-top: 70px; /* Adjust this value as needed */
+    padding-top: 70px; 
 }
 
 
@@ -133,18 +133,18 @@ h1 {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the timeline */
+    align-items: center; 
 }
 
 .entry {
     position: relative;
     display: flex;
-    width: 80%; /* Adjust based on preferred width */
+    width: 80%;
     align-items: center;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    margin: 125px 0; /* Increased vertical margin */
+    margin: 125px 0; 
 }
 
 .entry.visible {
@@ -154,25 +154,25 @@ h1 {
 
 .entry.left .content {
     text-align: left;
-    order: 2; /* Text after the marker for left-aligned entries */
+    order: 2; 
 }
 
 .entry.right .content {
     text-align: right;
-    order: 1; /* Text before the marker for right-aligned entries */
+    order: 1; 
 }
 
 .marker {
-    width: 60px; /* Increased size */
-    height: 60px; /* Increased size */
+    width: 60px; 
+    height: 60px; 
     background: #ceb1be;
     border-radius: 50%;
-    border: 6px solid white; /* Doubled border thickness */
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.5), 0 0 10px rgba(0,0,0,0.75); /* Inner and outer drop shadows */
+    border: 6px solid white; 
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.5), 0 0 10px rgba(0,0,0,0.75); 
     position:absolute;
-    left: 50%; /* Center the marker on the timeline */
-    transform: translateX(-49%) translateY(-49%); /* Perfectly center the marker */
-    z-index: 1; /* Ensure marker is above the line */
+    left: 50%; 
+    transform: translateX(-49%) translateY(-49%); 
+    z-index: 1; 
 }
 
 .timeline:before {
@@ -184,7 +184,7 @@ h1 {
     bottom: 0;
     width: 6px;
     background-color: white;
-    z-index: 0; /* Ensure line is below markers */
+    z-index: 0; 
 }
 
 h3 {
@@ -192,30 +192,30 @@ h3 {
 }
 
 h3, img {
-    margin: 0; /* Remove margin to align text and images correctly */
+    margin: 0; 
 }
 
 img {
-    width: 100%; /* Adjust based on your specific layout needs */
+    width: 100%; 
     max-width: 300px;
 }
 
 .entry.left {
-    justify-content: flex-end; /* Align content to the end for left entries */
+    justify-content: flex-end; 
 }
 
 .entry.right {
-    justify-content: flex-start; /* Align content to the start for right entries */
+    justify-content: flex-start;
 }
 
 @media (max-width: 1000px) {
     .timeline {
-        align-items: flex-start; /* Align timeline to the left side */
+        align-items: flex-start; 
     }
 
     .entry {
-        flex-direction: row; /* Ensure entries are in a row layout */
-        margin: 50px 0; /* Adjust vertical margin */
+        flex-direction: row; 
+        margin: 50px 0; 
     }
 
     .entry.left .content {
@@ -223,30 +223,30 @@ img {
     }
     
     .entry.right .content {
-        text-align: left; /* Text alignment for smaller screens */
-        order: 2; /* Ensure content is after marker */
-        margin-left: 35%; /* Add left margin to content */
+        text-align: left; 
+        order: 2; 
+        margin-left: 35%; 
     }
 
     .marker {
-        left: 0; /* Position marker on the left side */
-        transform: translateX(80%) translateY(-50%); /* Adjust translation */
+        left: 0; 
+        transform: translateX(80%) translateY(-50%); 
     }
 
     .timeline:before {
-        left: 0; /* Adjust timeline line to the left */
-        transform: translateX(1500%); /* Adjust translation */
+        left: 0; 
+        transform: translateX(1500%); 
     }
 }
 
 @media (max-width: 600px) {
     .timeline {
-        align-items: flex-start; /* Align timeline to the left side */
+        align-items: flex-start; 
     }
 
     .entry {
-        flex-direction: row; /* Ensure entries are in a row layout */
-        margin: 50px 0; /* Adjust vertical margin */
+        flex-direction: row; 
+        margin: 50px 0; 
     }
 
     .entry.left .content {
@@ -256,9 +256,9 @@ img {
     }
     
     .entry.right .content {
-        text-align: left; /* Text alignment for smaller screens */
-        order: 2; /* Ensure content is after marker */
-        margin-left: 35%; /* Add left margin to content */
+        text-align: left; 
+        order: 2;
+        margin-left: 35%; 
         width: 100%;
         height: auto;
     }
@@ -269,12 +269,27 @@ img {
     }
     
     .marker {
-        left: 0; /* Position marker on the left side */
-        transform: translateX(-18%) translateY(-160%); /* Adjust translation */
+        left: 0; 
+        transform: translateX(-7%) translateY(-70%); 
     }
 
     .timeline:before {
-        left: 0; /* Adjust timeline line to the left */
-        transform: translateX(300%); /* Adjust translation */
+        left: 0; 
+        transform: translateX(450%); 
     }
+    
+    h1 {
+        padding-top: 10%;
+    }
+    
+    nav ul li {
+        margin: -4px;
+    }
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #d5c1c1;
 }
