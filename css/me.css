@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  background: #000;
+  font-family: "Circular Std";
+}
+
+p {
+  position: absolute;
+  text-decoration: none;
+  color: #fff;
+  font-size: 40px;
+  right: 5vh;
+  top: 5vh;
+  transition: transform 0.3s ease;
+}
+
+a, p:hover {
+  transform: scale(1.1); /* Slightly enlarge text on hover */
+  cursor: pointer;
+}
+
+h1 {
+  position: absolute;
+  text-decoration: none;
+  color: #fff;
+  font-size:150px;
+  left: 50vh;
+  top: 35vh;
+  transition: transform 0.3s ease;
+}
