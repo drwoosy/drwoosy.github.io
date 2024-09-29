@@ -198,16 +198,16 @@ button {
 
 .linkedin-icon {
   position: fixed;
-  bottom: -650px;
-  left: 20px;
+  bottom: -93vh;
+  left: 2.5vh;
   opacity: 0;
   transition: opacity 0.5s ease;
   z-index: 1000; 
 }
 
 .linkedin-icon img {
-  width: 50px;
-  height: 50px;
+  width: auto;
+  height: 9vh;
   transition: transform 0.3s ease; 
 }
 
@@ -217,16 +217,16 @@ button {
 
 .linkedin-icon-right {
   position: fixed;
-  bottom: -650px;
-  right: 20px;  
+  bottom: -93vh;
+  right: 2.5vh;  
   z-index: 1000;
   opacity: 0; 
   transition: opacity 0.5s ease;
 }
 
 .linkedin-icon-right img {
-  width: 100px;
-  height: auto;
+  width: auto;
+  height: 9vh;
   transition: transform 0.3s ease;
 }
 
@@ -264,7 +264,7 @@ button {
 }
 
 .autoBLur {
-    font-size: 10em; 
+    font-size: 12vw; 
     color: #fff; 
     margin: 20px 0; 
     transition: transform 0.3s ease
@@ -283,7 +283,7 @@ button {
 }
 
 .position-1:hover {
-  font-size: 10.5em;
+  font-size: 12.5vw;
 }
 
 .position-2 {
@@ -293,7 +293,7 @@ button {
 }
 
 .position-2:hover {
-  font-size: 10.5em;
+  font-size: 12.5vw;
 }
 
 .position-3 {
@@ -303,7 +303,7 @@ button {
 }
 
 .position-3:hover {
-  font-size: 10.5em;
+  font-size: 12.5vw;
 }
 
 .position-4 {
@@ -313,6 +313,6 @@ button {
 }
 
 .position-4:hover {
-  font-size: 10.5em;
+  font-size: 12.5vw;
 }
 

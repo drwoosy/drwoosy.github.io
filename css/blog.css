@@ -15,7 +15,7 @@ p {
   position: absolute;
   text-decoration: none;
   color: #fff;
-  font-size: 40px;
+  font-size: 3vw;
   right: 5vh;
   top: 5vh;
   transition: transform 0.3s ease;
