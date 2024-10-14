@@ -1,37 +1,131 @@
-* {
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
-html,
-body {
-  width: 100%;
-  background: #000;
-  font-family: "Circular Std";
+#calendar-container {
+  width: 80vw; /* Use viewport width for scaling */
+  height: 80vh; /* Use viewport height */
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px; /* Rounded corners for container */
 }
+
+#calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+#calendar-header h1 {
+  font-size: 2vw; /* Responsive font size based on viewport */
+}
+
+#calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+}
+
+.calendar-day {
+  padding: 30px;
+  border: 2px solid white;
+  border-radius: 10px; /* Rounded corners for days */
+  font-size: 1.5vw;
+  cursor: default; /* No hover effect for non-blog days */
+}
+
+.calendar-day.blog {
+  background-color: #560be1; /* Highlight blog days */
+  cursor: pointer; /* Show pointer on hover for clickable blog days */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.calendar-day.blog:hover {
+  transform: scale(1.2); /* Enlarge only blog days on hover */
+  z-index: 1; /* Ensure the hovered element stays on top */
+  background-color: #4511a0; /* Change background on hover */
+}
+
+#prev-month, #next-month {
+  font-weight: bold;
+  background-color: transparent; /* No box around buttons */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5vw;
+}
+
+#prev-month:hover, #next-month:hover {
+  transform: scale(1.1); /* Enlarge buttons on hover */
+  transition: transform 0.3s ease; /* Smoother button hover transition */
+}
+
+#prev-month:disabled, #next-month:disabled {
+  color: grey;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  #calendar-container {
+      width: 95vw;
+      height: 90vh;
+  }
+
+  #calendar-header h1 {
+      font-size: 4vw;
+  }
+
+  .calendar-day {
+      font-size: 3vw;
+      padding: 20px;
+  }
+
+  #prev-month, #next-month {
+      font-size: 3vw;
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+      box-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 30px #ff007f;
+  }
+  50% {
+      box-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+  }
+  100% {
+      box-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 30px #ff007f;
+  }
+}
+
+.birthday {
+  background-color: #ff007f; /* Birthday color */
+  transition: box-shadow 0.3s ease;
+}
+
+
 
 p {
   position: absolute;
   text-decoration: none;
   color: #fff;
-  font-size: 3vw;
+  font-size: 2vw;
   right: 5vh;
   top: 5vh;
   transition: transform 0.3s ease;
 }
 
+
+
 a, p:hover {
   transform: scale(1.1); /* Slightly enlarge text on hover */
   cursor: pointer;
-}
-
-h1 {
-  position: absolute;
-  text-decoration: none;
-  color: #fff;
-  font-size:150px;
-  left: 50vh;
-  top: 35vh;
-  transition: transform 0.3s ease;
 }
