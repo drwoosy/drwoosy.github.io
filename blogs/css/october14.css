@@ -23,7 +23,6 @@ p:hover {
     cursor: pointer;
 }
 
-/* Center h1 vertically on the left */
 h1 {
     position: absolute;
     top: 30vh;
@@ -41,20 +40,20 @@ h1 {
 .audio-player {
     position: absolute;
     right: 15vw;
-    top: 10vh; /* Adjusted to be 40vh from the top */
+    top: 10vh; 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    cursor: pointer; /* Make the canvas clickable */
+    cursor: pointer; 
 }
 
 canvas#wave-visualizer {
-    width: 70vh; /* Adjust for circular shape */
-    height: 30vh; /* Adjust for circular shape */
+    width: 70vh; 
+    height: 30vh; 
     background-color: black;
     border: 2px solid black;
-    border-radius: 50%; /* Make it a circle */
+    border-radius: 50%; 
     position: relative;
 }
 
@@ -66,28 +65,28 @@ canvas#wave-visualizer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    pointer-events: none; /* Make sure it doesn't block clicks */
-    z-index: 10; /* Ensure it is displayed above the canvas */
+    pointer-events: none; 
+    z-index: 10; 
 }
 
 #subtitle-container {
     position: absolute;
-    bottom: 25vh; /* Adjust the vertical position if needed */
-    right: 0vw;  /* Move the subtitles 15vw from the left side */
-    width: 60%;  /* Adjust this width depending on your needs */
+    bottom: 25vh; 
+    right: 0vw; 
+    width: 60%;  
     text-align: center;
     color: white;
-    font-size: 2vw;  /* Ensure the font size is responsive */
+    font-size: 2vw;  
 }
 
 .subtitle-line {
-    opacity: 0; /* Hidden by default */
-    transition: opacity 0.5s ease-in-out; /* Smooth fade for opacity */
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out; 
 }
 
 .subtitle-line.active {
-    opacity: 1; /* Full opacity for the active line */
-    transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity */
+    opacity: 1; 
+    transition: opacity 0.5s ease-in-out; 
 }
 
 #timestamp-display {

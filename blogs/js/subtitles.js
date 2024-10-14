@@ -1,5 +1,5 @@
-const subtitleAudio = document.getElementById('audio'); // Reference to the audio element
-const timestampDisplay = document.getElementById('timestamp-display'); // Reference to the timestamp display
+const subtitleAudio = document.getElementById('audio'); 
+const timestampDisplay = document.getElementById('timestamp-display'); 
 
 const subtitleLines = {
     line1: document.getElementById('line1'),
@@ -8,16 +8,15 @@ const subtitleLines = {
 };
 
 let currentIndex = 0;
-let lastSubtitleIndex = -1; // To track the last shown subtitle
+let lastSubtitleIndex = -1;
 
-// Function to clear classes before applying new ones
+
 function clearSubtitleClasses() {
     subtitleLines.line1.classList.remove('active', 'fade-out', 'fade-in');
     subtitleLines.line2.classList.remove('active', 'fade-out', 'fade-in');
     subtitleLines.line3.classList.remove('active', 'fade-out', 'fade-in');
 }
 
-// Array of subtitles with start and end times
 const subtitles = [
     { text: "recently i've been engaged to the idea of <i>doing</i>", start: 1, end: 3.4 },
     { text: "the other day, i watched the movie <i>Good Will Hunting</i>", start: 3.6, end: 5.5 },
@@ -54,53 +53,41 @@ const subtitles = [
     { text: "and i'd love to hear from <i>you.</i>", start: 80.9, end: 83 }
 ];
 
-// Function to update the subtitles and timestamp in sync with the audio
 function updateSubtitles() {
-    const currentTime = subtitleAudio.currentTime.toFixed(2); // Get current time from audio and show hundredths of a second
+    const currentTime = subtitleAudio.currentTime.toFixed(2); 
 
-    // Update the timestamp display
     timestampDisplay.innerText = currentTime;
 
-    // Check if we need to update subtitles based on the audio time
     if (currentIndex < subtitles.length) {
         const subtitle = subtitles[currentIndex];
 
-        // Check if the current time is within the start and end time of the current subtitle
         if (currentTime >= subtitle.start && currentTime <= subtitle.end) {
             
-            // Ensure we only update the subtitle once per index
             if (currentIndex !== lastSubtitleIndex) {
                 
-                // Fade out the current active line (if any)
                 if (currentIndex > 0) {
                     subtitleLines.line2.classList.add('fade-out');
                 }
 
-                // Wait for the fade-out to complete before replacing the text
                 setTimeout(() => {
-                    // Show the new active subtitle
-                    subtitleLines.line1.innerHTML = subtitleLines.line2.innerHTML;  // Top line moves up and disappears
-                    subtitleLines.line2.innerHTML = subtitle.text;   // New active line
+                    subtitleLines.line1.innerHTML = subtitleLines.line2.innerHTML; 
+                    subtitleLines.line2.innerHTML = subtitle.text; 
 
-                    // Clear old classes before applying new transitions
                     clearSubtitleClasses();
 
-                    // Apply the "active" class to the middle line
-                    subtitleLines.line2.classList.add('active'); // The middle line becomes visible
+                    subtitleLines.line2.classList.add('active'); 
 
-                    lastSubtitleIndex = currentIndex; // Update the last shown subtitle index
-                }, 500); // 0.5s delay to match the fade-out duration
+                    lastSubtitleIndex = currentIndex; 
+                }, 500); 
             }
         }
         
-        // Move to the next subtitle after the end time has passed
         if (currentTime > subtitle.end) {
-            currentIndex++; // Increment the index only after the subtitle ends
+            currentIndex++; 
         }
     }
 }
 
-// Sync the subtitles and timestamp with the audio playback
 subtitleAudio.addEventListener('timeupdate', updateSubtitles);
 subtitleAudio.addEventListener('play', updateSubtitles);
 subtitleAudio.addEventListener('pause', () => clearInterval(updateSubtitles));

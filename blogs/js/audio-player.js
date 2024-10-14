@@ -5,23 +5,22 @@ const ctx = waveCanvas.getContext('2d');
 
 let isPlaying = false;
 let audioContext, analyser, dataArray, bufferLength;
-let animationFrameId; // Keep track of the requestAnimationFrame ID
+let animationFrameId; 
 
 function createVisualizer() {
     if (!audioContext) {
-      // Create an AudioContext if it doesn't exist yet
+     
       audioContext = new (window.AudioContext || window.webkitAudioContext)();
       const source = audioContext.createMediaElementSource(audio);
       analyser = audioContext.createAnalyser();
       source.connect(analyser);
       analyser.connect(audioContext.destination);
   
-      analyser.fftSize = 1024; // Higher fftSize for smoother waves
-      analyser.smoothingTimeConstant = 0.8; // Smooth the changes over time
+      analyser.fftSize = 1024;
+      analyser.smoothingTimeConstant = 0.8;
       bufferLength = analyser.frequencyBinCount;
       dataArray = new Uint8Array(bufferLength);
   
-      // Improve canvas resolution based on device pixel ratio
       const devicePixelRatio = window.devicePixelRatio || 1;
       waveCanvas.width = waveCanvas.clientWidth * devicePixelRatio;
       waveCanvas.height = waveCanvas.clientHeight * devicePixelRatio;
@@ -31,26 +30,26 @@ function createVisualizer() {
   
 
   function drawVisualizer() {
-    animationFrameId = requestAnimationFrame(drawVisualizer); // Continue the loop
+    animationFrameId = requestAnimationFrame(drawVisualizer); 
   
-    analyser.getByteFrequencyData(dataArray); // Get frequency data
+    analyser.getByteFrequencyData(dataArray); 
   
-    ctx.clearRect(0, 0, waveCanvas.width, waveCanvas.height); // Clear the canvas
-    ctx.lineWidth = 1; // Thinner line for smoother look
-    ctx.strokeStyle = 'white'; // Set wave color to white
+    ctx.clearRect(0, 0, waveCanvas.width, waveCanvas.height); 
+    ctx.lineWidth = 1; 
+    ctx.strokeStyle = 'white'; 
     ctx.beginPath();
   
-    // Use the clientWidth and clientHeight for centering
-    const centerX = waveCanvas.clientWidth / 2; // X-center based on CSS size
-    const centerY = waveCanvas.clientHeight / 2; // Y-center based on CSS size
-    const radius = waveCanvas.clientWidth / 2; // Keep the radius based on CSS width
+   
+    const centerX = waveCanvas.clientWidth / 2; 
+    const centerY = waveCanvas.clientHeight / 2; 
+    const radius = waveCanvas.clientWidth / 2; 
   
     const sliceWidth = (Math.PI * 2) / bufferLength;
     let angle = 0;
   
     for (let i = 0; i < bufferLength; i++) {
       const amplitude = dataArray[i];
-      const normalizedAmplitude = amplitude / 255; // Normalize amplitude
+      const normalizedAmplitude = amplitude / 255; 
   
       const y = normalizedAmplitude * radius;
   
@@ -67,29 +66,29 @@ function createVisualizer() {
     }
   
     ctx.closePath();
-    ctx.stroke(); // Draw the waveform
+    ctx.stroke(); 
   }
   
 
 waveCanvas.addEventListener('click', () => {
   if (!isPlaying) {
     audio.play().then(() => {
-      startText.style.display = 'none'; // Hide "Start" text when playing
-      createVisualizer(); // Initialize the audio context and analyser
-      drawVisualizer(); // Start the drawing loop
+      startText.style.display = 'none'; 
+      createVisualizer(); 
+      drawVisualizer();
       isPlaying = true;
     }).catch((error) => {
-      console.error('Audio play error:', error); // Catch any play errors
+      console.error('Audio play error:', error); 
     });
   } else {
     audio.pause();
-    cancelAnimationFrame(animationFrameId); // Stop the drawing loop
+    cancelAnimationFrame(animationFrameId); 
     isPlaying = false;
   }
 });
 
 audio.addEventListener('ended', () => {
-  cancelAnimationFrame(animationFrameId); // Stop the animation when audio ends
+  cancelAnimationFrame(animationFrameId); 
   isPlaying = false;
-  startText.style.display = 'block'; // Show "Start" text again when audio ends
+  startText.style.display = 'block'; 
 });
