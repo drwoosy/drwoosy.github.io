@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Boxing Match RSVP</title>
+  <link rel="stylesheet" href="css/goon.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Noah (CROWN) vs Vishnu (GOON)</h1>
+
+    <button id="rsvpBtn" class="rsvp-button">RSVP to the Match</button>
+
+    <div id="nameSection" class="hidden">
+      <input type="text" id="nameInput" placeholder="Enter your name" />
+      <button id="submitName">Continue</button>
+    </div>
+
+    <div id="pollSection" class="hidden">
+      <h2>Who do you think is winning?</h2>
+      <div class="poll-buttons">
+        <button class="vote-button" data-fighter="Noah">Noah</button>
+        <button class="vote-button" data-fighter="Vishnu">Vishnu</button>
+      </div>
+
+      <div id="pollGraph" class="graph hidden">
+        <div class="bar-container">
+          <label>Noah</label>
+          <div class="bar" id="noahBar" style="width: 0%">0%</div>
+        </div>
+        <div class="bar-container">
+          <label>Vishnu</label>
+          <div class="bar" id="vishnuBar" style="width: 0%">0%</div>
+        </div>
+      </div>
+
+      <p class="address">PULL UP <br>📍 ADDRESS TBD <br><br>5:00 PM<br></p>
+    </div>
+  </div>
+  <script src="js/goon.js"></script>
+</body>
+</html>

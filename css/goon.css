@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #0d0d0d;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .container {
+    padding: 2rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .rsvp-button {
+    background: linear-gradient(45deg, gold, crimson);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .rsvp-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px crimson;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  input[type="text"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  button#submitName {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    background: crimson;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .poll-buttons {
+    margin-top: 1rem;
+  }
+  
+  .vote-button {
+    background: #222;
+    color: white;
+    border: 2px solid crimson;
+    margin: 0.5rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .vote-button:hover {
+    background: crimson;
+  }
+  
+  .address {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+  }
+  
+  .graph {
+    margin-top: 2rem;
+    text-align: left;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .bar-container {
+    margin-bottom: 1rem;
+  }
+  
+  .bar {
+    height: 25px;
+    background-color: crimson;
+    text-align: right;
+    padding-right: 5px;
+    line-height: 25px;
+    color: white;
+    transition: width 0.5s ease;
+  }
+  
